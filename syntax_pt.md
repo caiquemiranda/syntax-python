@@ -41,7 +41,7 @@ class Cavalo(objeto):
     def make_sound(self):
         imprima "neighh"
 
-    def movimento (auto):
+    def movimento(auto):
         retornar "andar"
 ```
 
@@ -56,11 +56,11 @@ class NomeDaClasse(SuperClasse):
 > Exemplo:
 
 ```{python}
-class Cavalo de Corrida(Cavalo):
+class CavalodeCorrida(Cavalo):
     
     """Um cavalo mais rápido que herda de Cavalo"""
     
-    def movimento (auto):
+    def movimento(auto):
         retornar "executar"
     
     def movimento_lento(self):
@@ -72,14 +72,16 @@ class Cavalo de Corrida(Cavalo):
 
 ```{python}
 >> cavalo3 = RaceHorse("branco",200)
->> imprimir cavalo3.movement_slow()
+>> print(cavalo3.movement_slow())
 "andar"
->> imprimir cavalo3.movimento()
+>> print(cavalo3.movimento())
 "corre"
 ```
+
 ## Comentários
 
 ### Comentários de linha única
+
 Aumentar o código com descrições legíveis por humanos pode ajudar a documentar as decisões de design.
 
 > Exemplo:
@@ -178,7 +180,7 @@ def function_name(parâmetros, named_default_parameter=valor):
 
 ```{python}
 def shout(exclamation="Ei!"):
-  imprimir exclamação
+  print(exclamação)
 
 shout() # Exibe "Ei!"
 
@@ -200,8 +202,12 @@ foo = say_hello("Alice")
 # Agora o valor de 'foo' é "Olá, Alice"
 
 divertido = diga_olá
-# Agora o valor de 'fun' é um objeto de função que podemos usar como a função original:
+
+# Agora o valor de 'fun' é um objeto de função que podemos usar como a 
+
+função original:
 bar = diversão("Bob")
+
 # Agora o valor de 'bar' é "Hello, Bob"
 ```
 
@@ -231,6 +237,7 @@ def Produce_greeting_from(greeter):
 
 # Aqui criamos uma função de saudação para Eva:
 Produce_greeting_from_eve = Produce_greeting_from("Eve")
+
 # 'produce_greeting_from_eve' agora é uma função:
 print Produce_greeting_from_eve("Alice") # Exibe "Olá, Alice, eu sou Eve."
 
@@ -247,8 +254,10 @@ print Produce_greeting_from("Bob")("Eve") # Exibe "Olá, Eve, eu sou Bob."
 
 if current_action == 'PAUSE':
   pausa()
+
 elif current_action == 'RESTART':
   reiniciar()
+
 elif current_action == 'RESUME':
   retomar()
 
@@ -292,8 +301,8 @@ Maneiras convenientes de gerar ou extrair informações de listas.
 > Sintaxe:
 
 ```{python}
-[variável para variável em condição iterável]
-[variável para variável em iterável]
+[variável for variável in condição iterável]
+[variável for variável in iterável]
 ```
 
 > Exemplo:
@@ -335,28 +344,29 @@ Um tipo de dados Python que contém uma coleção ordenada de valores, que podem
 
 ## Rotações
 
-### Para Loops
+### For Loops
+
 Python fornece uma sintaxe de iteração limpa. Observe os dois pontos e o recuo.
 
 > Exemplo:
 
 ```{python}
->> para i no intervalo (0, 3):
->> imprimir(i*2)
+>> for i no range(0, 3):
+>> print(i*2)
 0
 2
 4
 
 >> m_list = ["Senhor", "Lancelot", "Coco"]
->> para item em m_list:
->> imprimir(item)
+>> for item in m_list:
+>> print(item)
 Senhor
 Lancelot
 Cocos
 
 >> w_string = "Rápido"
->> para letra em w_string:
->> imprimir(carta)
+>> for letra in w_string:
+>> print(carta)
 S
 W
 eu
@@ -371,7 +381,7 @@ Um loop While permite que o código seja executado repetidamente até que uma de
 > Sintaxe:
 
 ```{python}
-enquanto condição:
+while condição:
     //faça alguma coisa
 ```
 
@@ -380,13 +390,13 @@ enquanto condição:
 ```{python}
 >> looping_needed = True
 >>
->> enquanto looping_necessário:
+>> while looping_necessário:
 >> # alguma operação em dados
->> se condição:
+>> if condição:
 >> looping_needed = False
 ```
 
-## imprimir()
+## print()
 
 Uma função para exibir a saída de um programa. Usar a versão entre parênteses é sem dúvida mais consistente.
 
@@ -402,7 +412,7 @@ Uma função para exibir a saída de um programa. Usar a versão entre parêntes
 "algum texto aqui também"
 ```
 
-## variar()
+## range()
 
 A função range() retorna uma lista de inteiros, cuja sequência é definida pelos argumentos passados ​​a ela.
 
@@ -410,25 +420,25 @@ A função range() retorna uma lista de inteiros, cuja sequência é definida pe
 
 ```{python}
 variações de argumentos:
-intervalo (terminal)
-intervalo (início, terminal)
+range(terminal)
+range(início, terminal)
 range(start, terminal, step_size)
 ```
 
 > Exemplo:
 
 ```{python}
->> intervalo(4)
+>> range(4)
 [0, 1, 2, 3]
 
->> intervalo(2, 8)
+>> range(2, 8)
 [2, 3, 4, 5, 6, 7]
 
->> intervalo(2, 13, 3)
+>> range(2, 13, 3)
 [2, 5, 8, 11]
 ```
 
-## Conjuntos
+## Sets
 
 Conjuntos são coleções de itens únicos, mas não ordenados. É possível converter certos iteráveis ​​em um conjunto.
 
@@ -445,7 +455,7 @@ Conjuntos são coleções de itens únicos, mas não ordenados. É possível con
 {1, 2, 3, 4, 5, 6, 7, 8, 55}
 ```
 
-## Fatiar
+## Slice
 
 Uma maneira Pythonic de extrair "fatias" de uma lista usando uma notação de colchetes especial que especifica o início e o fim da seção da lista que você deseja extrair. Deixar o valor inicial em branco indica que você deseja começar no início da lista, deixar o valor final em branco indica que deseja ir até o final da lista. Usar um valor negativo referencia o final da lista (de modo que em uma lista de 4 elementos, -1 significa o 4º elemento). O fatiamento sempre produz outra lista, mesmo ao extrair um único valor.
 
@@ -510,7 +520,7 @@ str(objeto)
 'Voo 123 da DB Airlines'
 ```
 
-### Cordas
+### Strings
 
 Strings armazenam caracteres e possuem muitos métodos de conveniência integrados que permitem modificar seu conteúdo. Strings são imutáveis, o que significa que não podem ser alteradas no lugar.
 
