@@ -141,7 +141,7 @@ dict() #creates new empty dictionary
 >> my_dict["key1"] #[1,2,3]
 >> my_dict[123] #456
 >> my_dict["new key"] = "New value"
->> print my_dict
+>> print(my_dict)
 {"key2":"I am a string", "new key":"New value", "key1":[1,2,3],123:456}
 ```
 
